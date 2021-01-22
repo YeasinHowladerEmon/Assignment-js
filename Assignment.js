@@ -3,7 +3,7 @@
             //kilometerToMeter//
 
 function kilometerToMeter(kilometer){
-    var meter = kilometer*1000;
+    var meter = kilometer * 1000;
     if (kilometer < 0) {
         return 'Error: The value cannot be negative';
     }
@@ -24,7 +24,7 @@ function kilometerToMeter(kilometer){
             return 'Error: You have to give three values';
         }
         else if (watch < 0 || mobile < 0 || laptop < 0) {
-            return 'Error: Negative values are not allowed'
+            return 'Error: Negative values are not allowed';
         }
         else {
             return totalSum;
@@ -51,10 +51,8 @@ function hotelCost(days) {
         var thirdPart = remaining * 50;
         amount = firstPart + secondPart + thirdPart;
     }
-    return amount
+    return amount;
 }
-
-
 
 
             //MegaFriend//
@@ -74,7 +72,7 @@ function megaFriend(friends){
             return 'Error: The array cannot be number';
             }
         else{
-            return name
+            return name;
             }
     }
  
