@@ -4,21 +4,32 @@
 
 function kilometerToMeter(kilometer){
     var meter = kilometer*1000;
-    return meter 
+    if (kilometer < 0) {
+        return 'Error: The value cannot be negative';
+    }
+    else if (kilometer == undefined) {
+        return 'Error: The value cannot be empty';
+    }
+    else {
+        return meter;
+    } 
 }
-var result = kilometerToMeter(10);
-console.log(result);
-
 
 
             //budgetCalculator//
 
  function budgetCalculator(watch, mobile, laptop){
-    var total = watch * 50 + mobile * 100 + laptop * 500;
-    return total;
-}
-var totalAmount = budgetCalculator(5, 2, 1);
-console.log(totalAmount);
+    var totalSum = watch * 50 + mobile * 100 + laptop * 500;
+        if (watch == undefined || mobile == undefined || laptop == undefined) {
+            return 'Error: You have to give three values';
+        }
+        else if (watch < 0 || mobile < 0 || laptop < 0) {
+            return 'Error: Negative values are not allowed'
+        }
+        else {
+            return totalSum;
+        }
+    }
 
 
 
@@ -42,8 +53,7 @@ function hotelCost(days) {
     }
     return amount
 }
-var totalAmount = hotelCost(35);
-console.log(totalAmount);
+
 
 
 
@@ -57,8 +67,14 @@ function megaFriend(friends){
                 name = element;
             }
         }
-        return name
+        if(name == undefined){
+            return 'Error: The array cannot be empty';
+            }
+        else if (typeof name == 'number'){
+            return 'Error: The array cannot be number';
+            }
+        else{
+            return name
+            }
     }
-    var friends = ['fahad', 'jfaroela', 'btkalerj', 'skdiroif', 'rafifero', 'abusayid', 'emon'];
-    var longestWord = megaFriend(friends);
-    console.log(longestWord) 
+ 
